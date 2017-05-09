@@ -8,7 +8,7 @@ def execFunc(string):
     print string
 
 def func(new_func, args):
-    new_func(*args)
+    new_func(args)
 
 def knock_back(set_ports, ipaddr):
     for port in set_ports:
@@ -42,7 +42,7 @@ def knock(set_ports):
 	    if port == str(packet[0].getlayer(IP).dport):
 		if port == current_port[len(current_port)-1]:
 		    print "Success"
-		    func(execFunc, ("t"))
+		    func(execFunc, ("test"))
 		    continue
 
 		print "Port Match"
